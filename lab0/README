@@ -1,0 +1,16 @@
+NAME: Darshini Gupta
+EMAIL: darshinigupta0711@gmail.com
+ID: 004928411
+
+My tar file contains the two screenshots of the segmentation fault and the
+value of the pointer, the source code file (lab0.c), a Makefile which creates
+the executable, the tar, cleans, and containe the smoke test, and this README.
+
+My smoke test cases check whether my program is working by ensuring the returned exit codes are correct. The command ./lab0 --segfault --dump-core --catch
+should return the exit code 139 since dump-core offsets the catch argument and
+there should be a segmentation fault. My next smoke test case makes sure the
+command ./lab0 with no argument works properly by checking if the exit code
+returned is 0, since the simple stdin and stdout should occur. My last smoke
+test case checks if the command ./lab0 --segfault --catch functionality
+works properly by making sure the code exits with code 4, since the fault
+should be caught.
