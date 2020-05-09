@@ -1,0 +1,16 @@
+//Name: Darshini Gupta
+//ID: 004928411
+//EMAIL: darshinigupta0711@gmail.com
+
+For the first part of this lab, I have implemented all of the options,
+except profile.  To my knowledge, these options work as they are supposed
+to and fulfill the requirements. One limitation in my program is that 
+my command option cannot handle a long option in its arguments ("--").
+
+In my tar file, there are three files: the Makefile, the source code, and this
+README file. In my Makefile, there is a make check, which has three test cases.
+The first checks if simply ./simpsh runs correctly with no arguments and
+this shoul return 0. The next smoke test checks for bad arguments and checks
+to see if the correct exit status was returned. The last test case checks
+if the program exits with a status code of 1, when a --rdonly is passed
+with a nonexistant file.

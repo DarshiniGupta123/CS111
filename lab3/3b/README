@@ -1,0 +1,15 @@
+//NAME:Darshini Gupta
+//ID:004928411
+//EMAIL:darshinigupta0711@gmail.com
+
+My tar file contains a README, Makefile, and a lab3b.py
+file. My Makefile default option copies my lab3b.py to
+an "executable" lab3b and I change the  permissions for both
+files so that can be executed. 
+
+I also used the links(http://cs.smith.edu/~nhowe/Teaching/csc262/oldlabs/ext2.html,
+http://www.science.unitn.it/~fiorella/guidelinux/tlk/node95.html,
+https://www.nongnu.org/ext2-doc/ext2.html) in the powerpoint while
+doing the project. I also looked at the link
+https://realpython.com/python-csv/#parsing-csv-files-with-pythons-built-in-csv-library
+to figure out how to parse through files and read lines.

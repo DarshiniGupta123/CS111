@@ -1,0 +1,17 @@
+NAME: Darshini Gupta
+EMAIL: darshinigupta0711@gmail.com
+ID: 004928411
+
+Serial Number: BBGW18040116
+MAC Address: 2CF7F1068F73
+
+My tar file includes 4 PNG files, 1 JPEG file, this README, and a Makefile.
+I used the links and tutorials in the project spec to complete this lab.
+
+connected.png shows that I connected my beaglebone and gave it a name
+
+copy.png shows that I copied my program to the BeagleBone
+
+build_run.png shows that me running the helloworld on the beaglebone
+
+git.png shows me cloning a git repository 

@@ -1,0 +1,60 @@
+//NAME:DARSHINI GUPTA
+//ID:004928411
+//EMAIL: darshinigupta0711@gmail.com
+
+
+In my tar file, I have included all the png files, the files to create the
+graphs/testing files, my source file(lab2_list.c) a Makefile
+and this README file. With the --yield option present and no protection
+my list code outputs errors like corrupted list. Also, my test
+script runs a little slow while running some test cases and for the
+spin lock test cases of the lab.
+
+QUESTION 2.3.1 - causing conflicts:
+Most of the CPU time in the 1 and 2 -threads list tests are being spent in the
+operations(insert, delete, lookup, length.) For the lower number of threads,
+these are the most expensive parts of code because they do not spend
+much time in spinning, since there are only 1 ot 2 threads and do not have
+to wait for the lock synchronization. Most of the CPU time being spent
+in the high-thread spin-lock test is in spinning and polling, waiting for
+threads to finish. Most of the CPU time being spent in high-thread mutex is
+putting threads to sleep and awakening them again, again waiting for threads
+to finish.
+
+QUESTION 2.3.2 - Execution Profiling:
+When the spin-lock version of the list exerciser is run with a large number
+of threads, the CPU is spending most of its time in the following line of code:
+ while(__sync_lock_test_and_set(&spin_lock, 1)). This operation becomes
+ expensive with a large number of threads because each thread is spinning,
+ waiting for a thread to finish and the resource to be free, so with a large
+ number of threads, there are an equivalently larger number of threads waiting.
+
+QUESTION 2.3.3 - Mutex Wait Time:
+As the number of contending threads increases, the average lock-wait time
+rises so dramatically because there are more threads that are waiting for
+the resource to be open since it has been locked and only one thread can use it
+at a time, so with more threads, there is more of wait since more threads
+need the resource and lock it. Completion time rises because as the number of
+threads increases, more time is taken  in terms of synchronization, and
+putting threads to sleep and awakening them, and this causes the time the
+program finishes to be later. However, completion time increases less
+dramatically compared to the lock-wait time because the lock-wait time is
+computed with regards to each thream while completion is for all the threads,
+and there are threads that wait together, so this would delay the completion
+time by only the wait time of one thread by the lock wait time would be
+delayed each thread that waits.
+
+QUESTION 2.3.4 - Performance of Partitioned Lists:
+Throughput increases as the number of lists increases. With a lower number of
+lists, threads have to wait as more threads have to share resources, and with
+more lists, more threads can work with the divided resource at the same time.
+Throughput would generally increase as the number of lists increases since
+it allows more threads to work at the same time, but at a point when there
+are some many lists, and not many threads competing for the resource,
+creating more lists is pointless and creates more overhead. A N-way partitioned
+list would not necessarily be equivalent to the throughput of a single list
+with 1/N threads because since the size of the list is shortened with
+partitions, threads have to spend less time doing the operations so there is
+a smaller possibility that the threads have to wait for the resource.
+
+

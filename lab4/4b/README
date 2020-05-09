@@ -1,0 +1,24 @@
+#NAME: Darshini Gupta
+#ID: 004928411
+#EMAIL: darshinigupta0711@gmail.com
+
+My tar file includes the Makefile, the lab4b.c source code file, and this
+README file. My Makefile has four components: default, which makes the 
+executable file, clean, which removes the executable and the tar file,
+check, which has the three smoke test checks, and dist, which makes the 
+tar file.
+
+My smoke test has three tests, all which test my program through the exit
+codes. My first check tests for a bad argument, which should exit with code 1.
+The next case checks for a bad command inputted from stdin, which 
+should also exit with code 1. The last check tests for a number of the commands
+from stdin, all which should work and exit with code 1.
+
+To do this lab, I used the resources:
+https://www.geeksforgeeks.org/input-buffering-in-compiler-design/
+https://www.geeksforgeeks.org/c-program-print-contents-file/
+https://www.cs.utah.edu/~germain/PPS/Topics/C_Language/file_IO.html
+
+These links helped me to read the commands from stdin and also figure out
+how to print to the log file.
+

@@ -1,0 +1,22 @@
+#NAME: Darshini Gupta
+#ID: 004928411
+#EMAIL: darshinigupta0711@gmail.com
+
+My tar file includes four files:
+
+lab4c_tcp.c: which is the source code for recieving commands and 
+sending temperatures to the server.
+
+lab4c_tls.c: which is the source code for sending commands to the 
+server via a TLS connection.
+
+Makefile: which makes the executables with the correct library dependencies,
+and also makes the tar ball
+
+README: this README file
+
+
+To complete this project, I had to look at the man pages of SSL_shutdown()
+and SSL_get_error(). I also had to look at SSL_read since my method of reading
+input byte by byte for command parsing was timing out in lab4c_tls.c
+ 

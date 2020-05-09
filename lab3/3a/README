@@ -1,0 +1,12 @@
+//NAME:Darshini Gupta
+//ID:004928411
+//EMAIL:darshinigupta0711@gmail.com
+
+My tar file contains a README, Makefile, lab3.c, and the ext2_fs.h
+file. The header file contains all the structs for the
+superblock, groups, inodes, etc.
+
+I also used the links(http://cs.smith.edu/~nhowe/Teaching/csc262/oldlabs/ext2.html,
+http://www.science.unitn.it/~fiorella/guidelinux/tlk/node95.html,
+https://www.nongnu.org/ext2-doc/ext2.html) in the powerpoint extensively while
+doing the project.

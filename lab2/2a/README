@@ -1,0 +1,65 @@
+//NAME:DARSHINI GUPTA
+//ID:004928411
+//EMAIL: darshinigupta0711@gmail.com
+
+
+In my tar file, I have included all the png files, the files to create the
+graphs/testing files, my source files(lab2_add.c and lab2_list.c) a Makefile
+and this README file. With the --yield option present and no protection
+my list code frequently outputs an error like corrupted list. Also, my test
+script runs a little slow for the spin lock test cases for part 2 of the
+lab.
+
+QUESTION 2.1.1 - causing conflicts:
+It takes many iterations before errors are seen because with a small number
+of iterations, threads do not have to wait so threads can finish their work
+faster and before the other thread is even created since the cost of the
+operations each thread has to do is less than the cost of making the next
+thread.
+
+QUESTION 2.1.2 - cost of yielding:
+The runs with --yield are so much slower because they decrease performance.
+The man page for sched_yield explains how this call results in many context
+switched because the calling thread relinquishes the CPU and is moved to
+the end of the queue. Context switches create more overhead an therefore there
+is an effect on performane. Also, we cannot calculate valid per-operation
+timings because we do not know how to do that since that timer all takes up
+time.
+
+QUESTION 2.1.3 - measurement errors:
+Creating threads take time and have a fixed overhead. Therefore, with
+increasing iterations and increasing operations, the overhead of creating
+threads is displaced evenly. The second graph we made looks at cost per
+operation vs iterations. We should run the number of iterations in which
+the graph plateaus.
+
+QUESTION 2.1.4 - costs of serialization:
+When there is a low number of threads there is not much synchronization that
+is occuring and the differences between the different protections options do
+not really develop. Therefore, the performance is mostly just based on the
+operations and calculations. As the number of threads rises, there are
+more locks/unlocks that are occuring and more race conditions that need
+to be prevented, and each thread might have to wait longer for the thing
+it needs, making the time increase.
+
+QUESTION 2.2.1 - scalability of Mutex:
+Both of the graphs are increasing functions, in which as the number of threads
+increase, so does the cost, which makes sense because there is more
+synchronization required. However, the graphs for Part 1(adds) eventually
+plateaus and becomes flat while the graph from Part 2 remains in a more or
+less linear fashion, which may be due to the fact that the operations in Part 2
+(insert, lookup, delete), are a lot more intensive than just add, so to reach
+that plateau stage and get to the point where the cost of making threads evens
+out is at a larger number.
+
+QUESTION 2.2.2 - scalability of spin locks
+Both the locks have increasing functions, where the cost increases with
+the number of threads, for the similar reason of more synchronization
+with increasing threads. However, the mutex function increases in a more
+consistent and linear manner, whereas the spin lock has a more varied graph.
+At the end of the spin lock function (24 threads), the rate of growth seems
+to increase by a lot, showing that spin locks cost probably increase a lot
+with a higher number of threads. This may be because mutexes put threads
+to sleep and spin lock is polling, and for a small number of threads, the cost
+of putting a thread to sleep and awakening is expensive but polling wastes
+a lot of time as the number of threads becomes large.
